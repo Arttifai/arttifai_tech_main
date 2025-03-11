@@ -34,7 +34,7 @@ function App() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-                        <img src="logo.jpg.png" className="h-20" />
+                        <img src="/logo.jpg.png" className="h-20" />
                         <span className="text-xl font-bold">Arttifai Tech</span>  
             </motion.div>
             <motion.div 
@@ -365,7 +365,7 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <img src="logo.jpg.png" alt="Arttifai Tech"/>
+              <img src="/logo.jpg.png" alt="Arttifai Tech"/>
               <p className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" />
               <p className="text-gray-400">
                 Redefining The Future of Innovation through quality internships and practical learning experiences.
