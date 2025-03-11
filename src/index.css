@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-orange-50 to-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-pink-600;
+  }
+  
+  .hover-gradient {
+    @apply hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 transition-all duration-300;
+  }
+}
