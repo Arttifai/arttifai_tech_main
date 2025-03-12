@@ -215,7 +215,7 @@ function App() {
                 type: "Remote",
                 icon: Code,
                 partner: "Google",
-                formLink: "https://forms.google.com/fullstack"
+                formLink: "/formbutt.html"
               },
               {
                 title: "Cloud Computing",
@@ -223,7 +223,7 @@ function App() {
                 type: "Remote",
                 icon: Database,
                 partner: "Microsoft",
-                formLink: "https://forms.google.com/cloud"
+                formLink: "/formbutt.html"
               },
               {
                 title: "Machine Learning",
@@ -231,7 +231,7 @@ function App() {
                 type: "Remote",
                 icon: Brain,
                 partner: "Google",
-                formLink: "https://forms.google.com/ml"
+                formLink: "/formbutt.html"
               },
               {
                 title: "UI/UX Design",
@@ -239,7 +239,7 @@ function App() {
                 type: "Remote",
                 icon: PenTool,
                 partner: "Microsoft",
-                formLink: "https://forms.google.com/uiux"
+                formLink: "/formbutt.html"
               },
               {
                 title: "Data Science",
@@ -247,7 +247,7 @@ function App() {
                 type: "Remote",
                 icon: LineChart,
                 partner: "Google",
-                formLink: "https://forms.google.com/datascience"
+                formLink: "/formbutt.html"
               },
               {
                 title: "Cybersecurity",
@@ -255,7 +255,7 @@ function App() {
                 type: "Remote",
                 icon: Shield,
                 partner: "Microsoft",
-                formLink: "https://forms.google.com/security"
+                formLink: "/formbutt.html"
               }
             ].map((internship, index) => {
               const IconComponent = internship.icon;
