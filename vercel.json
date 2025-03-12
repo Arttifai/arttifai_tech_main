@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "src": "/formbutt",
+      "dest": "/formbutt.html"
+    }
+  ]
+}
