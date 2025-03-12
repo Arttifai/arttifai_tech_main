@@ -11,43 +11,74 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
         }
         .container {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .form-group {
             margin-bottom: 15px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
         }
         label {
             font-weight: bold;
+            display: block;
         }
-        input {
+        input, select {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        input:focus, select:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
         }
         button {
             background-color: #28a745;
             color: white;
-            padding: 10px 15px;
+            padding: 12px;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
         }
         button:hover {
             background-color: #218838;
         }
+        .hidden {
+            display: none;
+        }
     </style>
     <script>
+        function toggleFields() {
+            const role = document.getElementById('role').value;
+            document.getElementById('student-fields').classList.toggle('hidden', role !== 'student');
+            document.getElementById('job-fields').classList.toggle('hidden', role !== 'job');
+        }
+
         function handleSubmit(event) {
-            event.preventDefault(); // Prevent default form submission
-            
+            event.preventDefault(); 
             const form = event.target;
             const formData = new FormData(form);
             
@@ -57,7 +88,7 @@
                 headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
-                    window.location.href = 'https://rzp.io/rzp/bjYUiOub'; // Redirect to payment
+                    window.location.href = 'https://rzp.io/rzp/bjYUiOub'; 
                 } else {
                     alert('Error submitting form. Please try again.');
                 }
@@ -69,15 +100,74 @@
 </head>
 <body>
     <div class="container">
-        <h2>Payment Form</h2>
+        <h2 style="text-align: center; color: #333;">Payment Form</h2>
         <form action="https://formspree.io/f/mrbpgyre" method="POST" onsubmit="handleSubmit(event)">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" name="role" required onchange="toggleFields()">
+                    <option value="">Select</option>
+                    <option value="student">Student</option>
+                    <option value="job">Job</option>
+                </select>
+            </div>
+            
+            <div id="student-fields" class="hidden">
+                <div class="form-group">
+                    <label for="college">College</label>
+                    <input type="text" id="college" name="college">
+                </div>
+                <div class="form-group">
+                    <label for="degree">Degree</label>
+                    <input type="text" id="degree" name="degree">
+                </div>
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <input type="text" id="year" name="year">
+                </div>
+            </div>
+            
+            <div id="job-fields" class="hidden">
+                <div class="form-group">
+                    <label for="experience">Experience</label>
+                    <input type="text" id="experience" name="experience">
+                </div>
+                <div class="form-group">
+                    <label for="workplace">Place of Work</label>
+                    <input type="text" id="workplace" name="workplace">
+                </div>
+                <div class="form-group">
+                    <label for="designation">Designation</label>
+                    <input type="text" id="designation" name="designation">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="domain">Domain</label>
+                <select id="domain" name="domain" required>
+                    <option value="">Select</option>
+                    <option value="Full Stack Development">Full Stack Development</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </select>
             </div>
             <button type="submit">Proceed to Payment</button>
         </form>
