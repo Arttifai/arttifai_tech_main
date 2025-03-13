@@ -278,7 +278,7 @@ function App() {
                   </div>
                   <div className="flex items-center text-gray-600 mb-4">
                     <Building className="h-4 w-4 mr-2" />
-                    <span>Partner: {internship.partner}</span>
+                    <span>Price: {internship.price}</span>
                   </div>
                   <motion.a 
                     href={internship.formLink}
