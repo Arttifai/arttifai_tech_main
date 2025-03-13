@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain } from 'lucide-react';
+import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain, IndianRupee } from 'lucide-react';
 import logo from '/logo.png';
-import {  IndianRupee } from "lucide-react";
+
 
 
 function App() {
@@ -223,7 +223,7 @@ function App() {
                 title: "Deep Learning",
                 duration: "1 week",
                 type: "Remote",
-                icon: code,
+                icon: database,
                 price: "6.99",
                 formLink: "https://forms.gle/N7oTjujhxetADGn38"
               },
@@ -255,7 +255,7 @@ function App() {
                 title: "Game Development",
                 duration: "1 week",
                 type: "Remote",
-                icon: code,
+                icon: shield,
                 price: "6.99",
                 formLink: "https://forms.gle/N7oTjujhxetADGn38"
               }
