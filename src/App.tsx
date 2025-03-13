@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain } from 'lucide-react';
 import logo from '/logo.png';
+import { IndianRupee } from "lucide-react";
 
 function App() {
   const fadeInUp = {
@@ -277,7 +278,7 @@ function App() {
                     <span>{internship.type}</span>
                   </div>
                   <div className="flex items-center text-gray-600 mb-4">
-                    <Building className="h-4 w-4 mr-2" />
+                    <IndianRupee className="h-4 w-4 mr-2" />
                     <span>Price: {internship.price}</span>
                   </div>
                   <motion.a 
