@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain } from 'lucide-react';
 import logo from '/logo.png';
 import { IndianRupee } from "lucide-react";
-import { Link } from 'react-router-dom';
+
 
 function App() {
   const fadeInUp = {
@@ -71,17 +71,17 @@ function App() {
                 Join Arttifai Tech's internship program in collaboration with Google and Microsoft.
                 Gain real-world experience through our 100% remote internship opportunities.
               </p>
-              const navigate = useNavigate();
-
-              <motion.button 
-                onClick={() => navigate("/internships")} // Redirect to the internships page
+              <motion.a 
+                href="https://forms.gle/N7oTjujhxetADGn38"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Explore Internships
                 <ChevronRight className="ml-2 h-5 w-5" />
-              </motion.button>
+              </motion.a>
             </motion.div>
             <motion.div 
               className="hidden md:block"
