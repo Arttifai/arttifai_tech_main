@@ -70,7 +70,7 @@ function App() {
                 Gain real-world experience through our 100% remote internship opportunities.
               </p>
               <motion.a 
-                href="https://forms.google.com/internships"
+                href="https://forms.gle/N7oTjujhxetADGn38"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
@@ -211,7 +211,7 @@ function App() {
             {[
               {
                 title: "Full Stack Development",
-                duration: "3 months",
+                duration: "1 week",
                 type: "Remote",
                 icon: Code,
                 partner: "Google",
@@ -219,7 +219,7 @@ function App() {
               },
               {
                 title: "Cloud Computing",
-                duration: "4 months",
+                duration: "1 week",
                 type: "Remote",
                 icon: Database,
                 partner: "Microsoft",
@@ -227,7 +227,7 @@ function App() {
               },
               {
                 title: "Machine Learning",
-                duration: "3 months",
+                duration: "1 week",
                 type: "Remote",
                 icon: Brain,
                 partner: "Google",
@@ -235,7 +235,7 @@ function App() {
               },
               {
                 title: "UI/UX Design",
-                duration: "2 months",
+                duration: "1 week",
                 type: "Remote",
                 icon: PenTool,
                 partner: "Microsoft",
@@ -243,7 +243,7 @@ function App() {
               },
               {
                 title: "Data Science",
-                duration: "4 months",
+                duration: "1 week",
                 type: "Remote",
                 icon: LineChart,
                 partner: "Google",
@@ -251,7 +251,7 @@ function App() {
               },
               {
                 title: "Cybersecurity",
-                duration: "3 months",
+                duration: "1 week",
                 type: "Remote",
                 icon: Shield,
                 partner: "Microsoft",
