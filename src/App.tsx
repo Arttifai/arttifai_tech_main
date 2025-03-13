@@ -2,7 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain } from 'lucide-react';
 import logo from '/logo.png';
-import { IndianRupee } from "lucide-react";
+import { 
+  Code, Database, Brain, PenTool, 
+  BarChart, Shield, Blocks, Bot, 
+  Joystick, Chip, Wifi, Settings, 
+  Smartphone, Bug , IndianRupee
+} from "lucide-react";
 
 
 function App() {
