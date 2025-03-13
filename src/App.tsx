@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain, IndianRupee } from 'lucide-react';
+import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain } from 'lucide-react';
 import logo from '/logo.png';
-
-
 
 function App() {
   const fadeInUp = {
@@ -36,7 +34,7 @@ function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-            >
+            >           
                         <img src={logo} alt="Logo" className="h-20"  />
                         <span className="text-xl font-bold">Arttifai Tech</span>  
             </motion.div>
@@ -72,7 +70,7 @@ function App() {
                 Gain real-world experience through our 100% remote internship opportunities.
               </p>
               <motion.a 
-                href="https://forms.gle/N7oTjujhxetADGn38"
+                href="https://forms.google.com/internships"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
@@ -213,51 +211,51 @@ function App() {
             {[
               {
                 title: "Full Stack Development",
-                duration: "1 week",
+                duration: "3 months",
                 type: "Remote",
                 icon: Code,
-                price: "6.99",
-                formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                partner: "Google",
+                formLink: "https://forms.google.com/fullstack"
               },
               {
-                title: "Deep Learning",
-                duration: "1 week",
+                title: "Cloud Computing",
+                duration: "4 months",
                 type: "Remote",
-                icon: database,
-                price: "6.99",
-                formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                icon: Database,
+                partner: "Microsoft",
+                formLink: "https://forms.google.com/cloud"
               },
               {
                 title: "Machine Learning",
-                duration: "1 week",
+                duration: "3 months",
                 type: "Remote",
                 icon: Brain,
-                price: "6.99",
-                formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                partner: "Google",
+                formLink: "https://forms.google.com/ml"
               },
               {
                 title: "UI/UX Design",
-                duration: "1 week",
+                duration: "2 months",
                 type: "Remote",
                 icon: PenTool,
-                price: "6.99",
-                formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                partner: "Microsoft",
+                formLink: "https://forms.google.com/uiux"
               },
               {
                 title: "Data Science",
-                duration: "1 week",
+                duration: "4 months",
                 type: "Remote",
                 icon: LineChart,
-                price: "6.99",
-                formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                partner: "Google",
+                formLink: "https://forms.google.com/datascience"
               },
               {
-                title: "Game Development",
-                duration: "1 week",
+                title: "Cybersecurity",
+                duration: "3 months",
                 type: "Remote",
-                icon: shield,
-                price: "6.99",
-                formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                icon: Shield,
+                partner: "Microsoft",
+                formLink: "https://forms.google.com/security"
               }
             ].map((internship, index) => {
               const IconComponent = internship.icon;
@@ -279,8 +277,8 @@ function App() {
                     <span>{internship.type}</span>
                   </div>
                   <div className="flex items-center text-gray-600 mb-4">
-                    <IndianRupee className="h-4 w-4 mr-2" />
-                    <span>Price: {internship.price}</span>
+                    <Building className="h-4 w-4 mr-2" />
+                    <span>Partner: {internship.partner}</span>
                   </div>
                   <motion.a 
                     href={internship.formLink}
