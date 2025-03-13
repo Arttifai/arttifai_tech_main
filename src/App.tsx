@@ -214,7 +214,7 @@ function App() {
                 duration: "1 week",
                 type: "Remote",
                 icon: Code,
-                partner: "Google",
+                price: "₹6.99",
                 formLink: "https://forms.gle/N7oTjujhxetADGn38"
               },
               {
@@ -222,7 +222,7 @@ function App() {
                 duration: "1 week",
                 type: "Remote",
                 icon: Database,
-                partner: "Microsoft",
+                price: "₹6.99",
                 formLink: "https://forms.gle/N7oTjujhxetADGn38"
               },
               {
@@ -230,7 +230,7 @@ function App() {
                 duration: "1 week",
                 type: "Remote",
                 icon: Brain,
-                partner: "Google",
+                price: "₹6.99",
                 formLink: "https://forms.gle/N7oTjujhxetADGn38"
               },
               {
@@ -238,7 +238,7 @@ function App() {
                 duration: "1 week",
                 type: "Remote",
                 icon: PenTool,
-                partner: "Microsoft",
+                price: "₹6.99",
                 formLink: "https://forms.gle/N7oTjujhxetADGn38"
               },
               {
@@ -246,7 +246,7 @@ function App() {
                 duration: "1 week",
                 type: "Remote",
                 icon: LineChart,
-                partner: "Google",
+                price: "₹6.99",
                 formLink: "https://forms.gle/N7oTjujhxetADGn38"
               },
               {
@@ -254,7 +254,7 @@ function App() {
                 duration: "1 week",
                 type: "Remote",
                 icon: Shield,
-                partner: "Microsoft",
+                price: "₹6.99",
                 formLink: "https://forms.gle/N7oTjujhxetADGn38"
               }
             ].map((internship, index) => {
