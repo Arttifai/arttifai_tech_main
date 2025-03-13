@@ -5,7 +5,7 @@ import logo from '/logo.png';
 import { IndianRupee } from "lucide-react";
 import { Link } from 'react-router-dom';
 
-function App() {
+function HomePage() {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
