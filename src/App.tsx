@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain, IndianRupee } from 'lucide-react';
@@ -28,6 +29,17 @@ function App() {
     transition: { duration: 0.2 }
   };
   const [showInternships, setShowInternships] = useState(false);
+  const navigate = useNavigate();  // Initialize navigation
+
+  const handleExploreClick = () => {
+    setShowInternships(true);
+    navigate("/internships");  // Updates the URL without full reload
+  };
+  
+  const handleBackClick = () => {
+    setShowInternships(false);
+    navigate(-1);  // Moves back in history, just like the browser's back button
+  };
 
   return (
       <div className="min-h-screen">
@@ -85,7 +97,7 @@ function App() {
                             </p>
                             <motion.div>
                               <button
-                                onClick={() => setShowInternships(true)}
+                                onClick={handleExploreClick}
                                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -323,12 +335,13 @@ function App() {
   
             {/* Back to Home Button */}
             <div className="text-center mt-12">
-              <button
-                onClick={() => setShowInternships(false)}
+              <Link 
+                to="/" 
+                onClick={handleBackClick} 
                 className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-all"
               >
                 Back to Home
-              </button>
+              </Link>
             </div>
 
           </>
