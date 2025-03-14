@@ -5,6 +5,9 @@
       "dest": "/formbutt.html"
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
