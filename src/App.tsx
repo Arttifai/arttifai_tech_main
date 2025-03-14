@@ -1,15 +1,15 @@
 import React from 'react';
- import { useState, useEffect } from "react";
- import { Link, useLocation, useNavigate } from "react-router-dom";
- import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
- import { motion } from 'framer-motion';
- import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain, IndianRupee } from 'lucide-react';
- import logo from '/logo.png';
- import InternshipsPage from './InternshipsPage';
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain, IndianRupee } from 'lucide-react';
+import logo from '/logo.png';
+import InternshipsPage from './InternshipsPage';
  
  
  
- function App() {
+function App() {
    const fadeInUp = {
      initial: { opacity: 0, y: 20 },
      animate: { opacity: 1, y: 0 },
