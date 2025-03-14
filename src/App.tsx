@@ -65,7 +65,16 @@ function App() {
                    >
                      <a href="#home" className="text-gray-700 hover:text-primary-500 transition-colors">Home</a>
                      <a href="#about" className="text-gray-700 hover:text-primary-500 transition-colors">About</a>
-                     <a href="#internships" className="text-gray-700 hover:text-primary-500 transition-colors">Internships</a>
+                     <a
+                       href="#internships"
+                       onClick={(e) => {
+                         e.preventDefault();
+                         document.getElementById("internships")?.scrollIntoView({ behavior: "smooth" });
+                       }}
+                       className="text-gray-700 hover:text-primary-500 transition-colors"
+                     >
+                       Internships
+                     </a>
                      <a href="#contact" className="text-gray-700 hover:text-primary-500 transition-colors">Contact</a>
                    </motion.div>
                  </div>
