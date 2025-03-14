@@ -94,13 +94,14 @@ function App() {
                             </p>
                             <div>
                               {location.pathname !== "/internships" ? (
-                              <Link
-                                to="/internships"
-                                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
-                              >
-                                Explore Internships
-                                <ChevronRight className="ml-2 h-5 w-5" />
-                              </Link>
+                                <Link
+                                  to="/internships"
+                                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
+                                >
+                                  Explore Internships
+                                  <ChevronRight className="ml-2 h-5 w-5" />
+                                </Link>
+                              )}
                             </div>
                           </motion.div>
                           <motion.div 
