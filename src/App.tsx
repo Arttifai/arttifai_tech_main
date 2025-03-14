@@ -322,16 +322,15 @@ function App() {
             <InternshipsPage />
   
             {/* Back to Home Button */}
-            <motion.div>
+            <div className="text-center mt-12">
               <button
                 onClick={() => setShowInternships(false)}
-                className="mt-4 px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg shadow hover:bg-gray-800 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-all"
               >
                 Back to Home
               </button>
-            </motion.div>
+            </div>
+
           </>
         )}
         
