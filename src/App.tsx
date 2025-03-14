@@ -31,91 +31,91 @@ function App() {
 
   return (
       <div className="min-h-screen">
-        {/* Navigation */}
-        <nav className="glass-card fixed w-full z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16 items-center">
-              <motion.div 
-                className="flex items-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                          <img src={logo} alt="Logo" className="h-20"  />
-                          <span className="text-xl font-bold">Arttifai Tech</span>  
-              </motion.div>
-              <motion.div 
-                className="hidden md:flex space-x-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <a href="#home" className="text-gray-700 hover:text-primary-500 transition-colors">Home</a>
-                <a href="#about" className="text-gray-700 hover:text-primary-500 transition-colors">About</a>
-                <a href="#internships" className="text-gray-700 hover:text-primary-500 transition-colors">Internships</a>
-                <a href="#contact" className="text-gray-700 hover:text-primary-500 transition-colors">Contact</a>
-              </motion.div>
-            </div>
-          </div>
-        </nav>
-
-        <Routes>
-          {/* Home Page */}
-          <Route 
-            path="/" 
-            element={
-              <>
-                {/* Hero Section */}
-                <section id="home" className="pt-20 bg-gradient-to-b from-primary-50 via-white to-secondary-50">
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                      <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
-                          Redefining The Future of Innovation
-                        </h1>
-                        <p className="text-lg text-gray-600 mb-8">
-                          Join Arttifai Tech's internship program in collaboration with Google and Microsoft.
-                          Gain real-world experience through our 100% remote internship opportunities.
-                        </p>
-                        <motion.div>
-                          <Link
-                            to="/internships"
-                            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            Explore Internships
-                            <ChevronRight className="ml-2 h-5 w-5" />
-                          </Link>
-                        </motion.div>
-                      </motion.div>
-                      <motion.div 
-                        className="hidden md:block"
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                      >
-                        <img 
-                          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800"
-                          alt="Team collaboration" 
-                          className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
-                        />
-                      </motion.div>
-                    </div>
-                  </div>
-                </section>    
-              </>
-            }
-          />
-        {/* Internships Page */}
-          <Route path="/internships" element={<InternshipsPage />} />
-        </Routes>
         {!showInternships ? (
           <>
+            {/* Navigation */}
+            <nav className="glass-card fixed w-full z-10">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between h-16 items-center">
+                  <motion.div 
+                    className="flex items-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                              <img src={logo} alt="Logo" className="h-20"  />
+                              <span className="text-xl font-bold">Arttifai Tech</span>  
+                  </motion.div>
+                  <motion.div 
+                    className="hidden md:flex space-x-8"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    <a href="#home" className="text-gray-700 hover:text-primary-500 transition-colors">Home</a>
+                    <a href="#about" className="text-gray-700 hover:text-primary-500 transition-colors">About</a>
+                    <a href="#internships" className="text-gray-700 hover:text-primary-500 transition-colors">Internships</a>
+                    <a href="#contact" className="text-gray-700 hover:text-primary-500 transition-colors">Contact</a>
+                  </motion.div>
+                </div>
+              </div>
+            </nav>
+    
+            <Routes>
+              {/* Home Page */}
+              <Route 
+                path="/" 
+                element={
+                  <>
+                    {/* Hero Section */}
+                    <section id="home" className="pt-20 bg-gradient-to-b from-primary-50 via-white to-secondary-50">
+                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                        <div className="grid md:grid-cols-2 gap-12 items-center">
+                          <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                          >
+                            <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
+                              Redefining The Future of Innovation
+                            </h1>
+                            <p className="text-lg text-gray-600 mb-8">
+                              Join Arttifai Tech's internship program in collaboration with Google and Microsoft.
+                              Gain real-world experience through our 100% remote internship opportunities.
+                            </p>
+                            <motion.div>
+                              <button
+                                onClick={() => setShowInternships(true)}
+                                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                              >
+                                Explore Internships
+                                <ChevronRight className="ml-2 h-5 w-5" />
+                              </button>
+                            </motion.div>
+                          </motion.div>
+                          <motion.div 
+                            className="hidden md:block"
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                          >
+                            <img 
+                              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800"
+                              alt="Team collaboration" 
+                              className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                            />
+                          </motion.div>
+                        </div>
+                      </div>
+                    </section>    
+                  </>
+                }
+              />
+            {/* Internships Page */}
+              <Route path="/internships" element={<InternshipsPage />} />
+            </Routes>
             {/* About Section */}
             <section id="about" className="py-20 bg-gradient-to-b from-white via-primary-50 to-white">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -315,8 +315,6 @@ function App() {
                 </motion.div>
               </div>
             </section>
-            {/* Button to show internships */}
-            < button onClick={() => setShowInternships(true)}>Explore Internships</button>
           </>
         ) : (
           <>
@@ -324,7 +322,16 @@ function App() {
             <InternshipsPage />
   
             {/* Back to Home Button */}
-            <button onClick={() => setShowInternships(false)}>Back to Home</button>
+            <motion.div>
+              <button
+                onClick={() => setShowInternships(false)}
+                className="mt-4 px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg shadow hover:bg-gray-800 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Back to Home
+              </button>
+            </motion.div>
           </>
         )}
         
