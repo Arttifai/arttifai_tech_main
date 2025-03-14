@@ -3,6 +3,10 @@
     {
       "src": "/formbutt",
       "dest": "/formbutt.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
