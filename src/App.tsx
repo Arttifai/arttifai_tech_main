@@ -40,8 +40,6 @@ function App() {
 
   return (
       <div className="min-h-screen">
-        {!showInternships ? (
-          <>
             {/* Navigation */}
             <nav className="glass-card fixed w-full z-10">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -324,9 +322,6 @@ function App() {
                 </motion.div>
               </div>
             </section>
-          </>
-        ) : (
-          <>
             {/* Only Internships Page is Displayed */}
             <InternshipsPage />
   
@@ -340,10 +335,6 @@ function App() {
               </Link>
 
             </div>
-
-          </>
-        )}
-        
   
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-gradient-to-b from-white to-primary-50">
