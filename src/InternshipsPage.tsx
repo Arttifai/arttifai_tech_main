@@ -59,11 +59,6 @@ const InternshipsPage = () => {
             );
           })}
         </div>
-        <div className="text-center mt-12">
-          <Link to="/" className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-all">
-            Back to Home
-          </Link>
-        </div>
       </div>
     </div>
   );
