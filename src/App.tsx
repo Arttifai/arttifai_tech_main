@@ -101,7 +101,7 @@ function App() {
                                   Explore Internships
                                   <ChevronRight className="ml-2 h-5 w-5" />
                                 </Link>
-                              )}
+                              ) : null}
                             </div>
                           </motion.div>
                           <motion.div 
