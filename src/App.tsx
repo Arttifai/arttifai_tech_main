@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain, IndianRupee } from 'lucide-react';
@@ -26,6 +27,7 @@ function App() {
     scale: 1.03,
     transition: { duration: 0.2 }
   };
+  const [showInternships, setShowInternships] = useState(false);
 
   return (
       <div className="min-h-screen">
@@ -112,206 +114,220 @@ function App() {
         {/* Internships Page */}
           <Route path="/internships" element={<InternshipsPage />} />
         </Routes>
-  
-        {/* About Section */}
-        <section id="about" className="py-20 bg-gradient-to-b from-white via-primary-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2 
-              className="text-3xl font-bold text-center gradient-text mb-12"
-              {...fadeInUp}
-            >
-              About Arttifai Tech
-            </motion.h2>
-            
-            {/* Company Overview */}
-            <motion.div 
-              className="mb-16"
-              {...fadeInUp}
-            >
-              <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
-                Arttifai Tech is a leading technology education platform, proudly collaborating with industry giants like Google and Microsoft
-                to provide cutting-edge internship opportunities. Our mission is to bridge the gap between academic learning and industry requirements
-                through practical, hands-on experience.
-              </p>
-            </motion.div>
-  
-            {/* Partners Section */}
-            <motion.div 
-              className="mb-16"
-              variants={staggerContainer}
-              initial="initial"
-              animate="animate"
-            >
-              <h3 className="text-2xl font-semibold text-center mb-8">Our Strategic Partners</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <motion.div 
-                  className="glass-card p-6 rounded-lg"
-                  variants={fadeInUp}
-                  whileHover={cardHover}
+        {!showInternships ? (
+          <>
+            {/* About Section */}
+            <section id="about" className="py-20 bg-gradient-to-b from-white via-primary-50 to-white">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <motion.h2 
+                  className="text-3xl font-bold text-center gradient-text mb-12"
+                  {...fadeInUp}
                 >
-                  <Building className="h-12 w-12 text-primary-500 mb-4 mx-auto" />
-                  <h4 className="text-xl font-semibold text-center mb-3">Google</h4>
-                  <p className="text-gray-600 text-center">
-                    Access to Google's advanced technologies and mentorship from Google engineers.
+                  About Arttifai Tech
+                </motion.h2>
+                
+                {/* Company Overview */}
+                <motion.div 
+                  className="mb-16"
+                  {...fadeInUp}
+                >
+                  <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto">
+                    Arttifai Tech is a leading technology education platform, proudly collaborating with industry giants like Google and Microsoft
+                    to provide cutting-edge internship opportunities. Our mission is to bridge the gap between academic learning and industry requirements
+                    through practical, hands-on experience.
                   </p>
                 </motion.div>
+      
+                {/* Partners Section */}
                 <motion.div 
-                  className="glass-card p-6 rounded-lg"
-                  variants={fadeInUp}
-                  whileHover={cardHover}
+                  className="mb-16"
+                  variants={staggerContainer}
+                  initial="initial"
+                  animate="animate"
                 >
-                  <Globe className="h-12 w-12 text-primary-500 mb-4 mx-auto" />
-                  <h4 className="text-xl font-semibold text-center mb-3">Microsoft</h4>
-                  <p className="text-gray-600 text-center">
-                    Learn cloud computing and enterprise solutions with Microsoft's expertise.
-                  </p>
+                  <h3 className="text-2xl font-semibold text-center mb-8">Our Strategic Partners</h3>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <motion.div 
+                      className="glass-card p-6 rounded-lg"
+                      variants={fadeInUp}
+                      whileHover={cardHover}
+                    >
+                      <Building className="h-12 w-12 text-primary-500 mb-4 mx-auto" />
+                      <h4 className="text-xl font-semibold text-center mb-3">Google</h4>
+                      <p className="text-gray-600 text-center">
+                        Access to Google's advanced technologies and mentorship from Google engineers.
+                      </p>
+                    </motion.div>
+                    <motion.div 
+                      className="glass-card p-6 rounded-lg"
+                      variants={fadeInUp}
+                      whileHover={cardHover}
+                    >
+                      <Globe className="h-12 w-12 text-primary-500 mb-4 mx-auto" />
+                      <h4 className="text-xl font-semibold text-center mb-3">Microsoft</h4>
+                      <p className="text-gray-600 text-center">
+                        Learn cloud computing and enterprise solutions with Microsoft's expertise.
+                      </p>
+                    </motion.div>
+                  </div>
+                </motion.div>
+      
+                {/* Why Choose Us */}
+                <h3 className="text-2xl font-semibold text-center mb-8">Why Choose Arttifai Tech?</h3>
+                <motion.div 
+                  className="grid md:grid-cols-3 gap-8"
+                  variants={staggerContainer}
+                  initial="initial"
+                  animate="animate"
+                >
+                  {[
+                    {
+                      icon: Users,
+                      title: "Expert Mentorship",
+                      description: "Learn directly from industry professionals at Google, Microsoft, and other tech leaders."
+                    },
+                    {
+                      icon: Briefcase,
+                      title: "Real Projects",
+                      description: "Work on actual projects used by millions of users worldwide."
+                    },
+                    {
+                      icon: Award,
+                      title: "Certification",
+                      description: "Receive industry-recognized certificates from Google and Microsoft."
+                    }
+                  ].map((item, index) => (
+                    <motion.div 
+                      key={index}
+                      className="glass-card p-6 rounded-lg"
+                      variants={fadeInUp}
+                      whileHover={cardHover}
+                    >
+                      <item.icon className="h-12 w-12 text-primary-500 mb-4" />
+                      <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                      <p className="text-gray-600">{item.description}</p>
+                    </motion.div>
+                  ))}
                 </motion.div>
               </div>
-            </motion.div>
-  
-            {/* Why Choose Us */}
-            <h3 className="text-2xl font-semibold text-center mb-8">Why Choose Arttifai Tech?</h3>
-            <motion.div 
-              className="grid md:grid-cols-3 gap-8"
-              variants={staggerContainer}
-              initial="initial"
-              animate="animate"
-            >
-              {[
-                {
-                  icon: Users,
-                  title: "Expert Mentorship",
-                  description: "Learn directly from industry professionals at Google, Microsoft, and other tech leaders."
-                },
-                {
-                  icon: Briefcase,
-                  title: "Real Projects",
-                  description: "Work on actual projects used by millions of users worldwide."
-                },
-                {
-                  icon: Award,
-                  title: "Certification",
-                  description: "Receive industry-recognized certificates from Google and Microsoft."
-                }
-              ].map((item, index) => (
-                <motion.div 
-                  key={index}
-                  className="glass-card p-6 rounded-lg"
-                  variants={fadeInUp}
-                  whileHover={cardHover}
+            </section>
+      
+            {/* Internships Section */}
+            <section id="internships" className="py-20 bg-gradient-to-b from-white via-secondary-50 to-white">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <motion.h2 
+                  className="text-3xl font-bold text-center gradient-text mb-12"
+                  {...fadeInUp}
                 >
-                  <item.icon className="h-12 w-12 text-primary-500 mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  Available Internships
+                </motion.h2>
+                <motion.div 
+                  className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                  variants={staggerContainer}
+                  initial="initial"
+                  animate="animate"
+                >
+                  {[
+                    {
+                      title: "Full Stack Development",
+                      duration: "1 week",
+                      type: "Remote",
+                      icon: Code,
+                      price: "6.99",
+                      formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                    },
+                    {
+                      title: "Deep Learning",
+                      duration: "1 week",
+                      type: "Remote",
+                      icon: Database,
+                      price: "6.99",
+                      formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                    },
+                    {
+                      title: "Machine Learning",
+                      duration: "1 week",
+                      type: "Remote",
+                      icon: Brain,
+                      price: "6.99",
+                      formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                    },
+                    {
+                      title: "UI/UX Design",
+                      duration: "1 week",
+                      type: "Remote",
+                      icon: PenTool,
+                      price: "6.99",
+                      formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                    },
+                    {
+                      title: "Data Science",
+                      duration: "1 week",
+                      type: "Remote",
+                      icon: LineChart,
+                      price: "6.99",
+                      formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                    },
+                    {
+                      title: "Game Development",
+                      duration: "1 week",
+                      type: "Remote",
+                      icon: Shield,
+                      price: "6.99",
+                      formLink: "https://forms.gle/N7oTjujhxetADGn38"
+                    }
+                  ].map((internship, index) => {
+                    const IconComponent = internship.icon;
+                    return (
+                      <motion.div 
+                        key={index} 
+                        className="glass-card p-6 rounded-lg"
+                        variants={fadeInUp}
+                        whileHover={cardHover}
+                      >
+                        <IconComponent className="h-10 w-10 text-primary-500 mb-4" />
+                        <h3 className="text-xl font-semibold mb-3">{internship.title}</h3>
+                        <div className="flex items-center text-gray-600 mb-2">
+                          <Clock className="h-4 w-4 mr-2" />
+                          <span>{internship.duration}</span>
+                        </div>
+                        <div className="flex items-center text-gray-600 mb-2">
+                          <MapPin className="h-4 w-4 mr-2" />
+                          <span>{internship.type}</span>
+                        </div>
+                        <div className="flex items-center text-gray-600 mb-4">
+                          <IndianRupee className="h-4 w-4 mr-2" />
+                          <span>Price: {internship.price}</span>
+                        </div>
+                        <motion.a 
+                          href={internship.formLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full px-4 py-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded hover:shadow-glow transition-all duration-300 inline-block text-center"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          Apply Now
+                        </motion.a>
+                      </motion.div>
+                    );
+                  })}
                 </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
+              </div>
+            </section>
+            {/* Button to show internships */}
+            < button onClick={() => setShowInternships(true)}>Explore Internships</button>
+          </>
+        ) : (
+          <>
+            {/* Only Internships Page is Displayed */}
+            <InternshipPage />
   
-        {/* Internships Section */}
-        <section id="internships" className="py-20 bg-gradient-to-b from-white via-secondary-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2 
-              className="text-3xl font-bold text-center gradient-text mb-12"
-              {...fadeInUp}
-            >
-              Available Internships
-            </motion.h2>
-            <motion.div 
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={staggerContainer}
-              initial="initial"
-              animate="animate"
-            >
-              {[
-                {
-                  title: "Full Stack Development",
-                  duration: "1 week",
-                  type: "Remote",
-                  icon: Code,
-                  price: "6.99",
-                  formLink: "https://forms.gle/N7oTjujhxetADGn38"
-                },
-                {
-                  title: "Deep Learning",
-                  duration: "1 week",
-                  type: "Remote",
-                  icon: Database,
-                  price: "6.99",
-                  formLink: "https://forms.gle/N7oTjujhxetADGn38"
-                },
-                {
-                  title: "Machine Learning",
-                  duration: "1 week",
-                  type: "Remote",
-                  icon: Brain,
-                  price: "6.99",
-                  formLink: "https://forms.gle/N7oTjujhxetADGn38"
-                },
-                {
-                  title: "UI/UX Design",
-                  duration: "1 week",
-                  type: "Remote",
-                  icon: PenTool,
-                  price: "6.99",
-                  formLink: "https://forms.gle/N7oTjujhxetADGn38"
-                },
-                {
-                  title: "Data Science",
-                  duration: "1 week",
-                  type: "Remote",
-                  icon: LineChart,
-                  price: "6.99",
-                  formLink: "https://forms.gle/N7oTjujhxetADGn38"
-                },
-                {
-                  title: "Game Development",
-                  duration: "1 week",
-                  type: "Remote",
-                  icon: Shield,
-                  price: "6.99",
-                  formLink: "https://forms.gle/N7oTjujhxetADGn38"
-                }
-              ].map((internship, index) => {
-                const IconComponent = internship.icon;
-                return (
-                  <motion.div 
-                    key={index} 
-                    className="glass-card p-6 rounded-lg"
-                    variants={fadeInUp}
-                    whileHover={cardHover}
-                  >
-                    <IconComponent className="h-10 w-10 text-primary-500 mb-4" />
-                    <h3 className="text-xl font-semibold mb-3">{internship.title}</h3>
-                    <div className="flex items-center text-gray-600 mb-2">
-                      <Clock className="h-4 w-4 mr-2" />
-                      <span>{internship.duration}</span>
-                    </div>
-                    <div className="flex items-center text-gray-600 mb-2">
-                      <MapPin className="h-4 w-4 mr-2" />
-                      <span>{internship.type}</span>
-                    </div>
-                    <div className="flex items-center text-gray-600 mb-4">
-                      <IndianRupee className="h-4 w-4 mr-2" />
-                      <span>Price: {internship.price}</span>
-                    </div>
-                    <motion.a 
-                      href={internship.formLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full px-4 py-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded hover:shadow-glow transition-all duration-300 inline-block text-center"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Apply Now
-                    </motion.a>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </div>
-        </section>
+            {/* Back to Home Button */}
+            <button onClick={() => setShowInternships(false)}>Back to Home</button>
+          </>
+        )}
+        
   
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-gradient-to-b from-white to-primary-50">
