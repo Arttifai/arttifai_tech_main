@@ -28,8 +28,18 @@ function App() {
      scale: 1.03,
      transition: { duration: 0.2 }
    };
-   const [showInternships, setShowInternships] = useState(false);
- 
+  const [showInternships, setShowInternships] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Effect to handle back button behavior
+  useEffect(() => {
+    if (location.pathname === "/internships") {
+      setShowInternships(true);
+    } else {
+      setShowInternships(false);
+    }
+  }, [location.pathname]); 
    return (
        <div className="min-h-screen">
          {!showInternships ? (
@@ -86,14 +96,17 @@ function App() {
                              </p>
                              <motion.div>
                                <button
-                                 onClick={() => setShowInternships(true)}
-                                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
-                                 whileHover={{ scale: 1.05 }}
-                                 whileTap={{ scale: 0.95 }}
-                               >
-                                 Explore Internships
-                                 <ChevronRight className="ml-2 h-5 w-5" />
-                               </button>
+                                onClick={() => {
+                                  setShowInternships(true);
+                                  navigate("/internships"); // Change URL when clicked
+                                }}
+                                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                              >
+                                Explore Internships
+                                <ChevronRight className="ml-2 h-5 w-5" />
+                              </button>
                              </motion.div>
                            </motion.div>
                            <motion.div 
@@ -321,15 +334,16 @@ function App() {
            <>
              {/* Only Internships Page is Displayed */}
              <InternshipsPage />
- 
-             {/* Back to Home Button */}
              <div className="text-center mt-12">
-               <button
-                 onClick={() => setShowInternships(false)}
-                 className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-all"
-               >
-                 Back to Home
-               </button>
+              <button
+                onClick={() => {
+                  setShowInternships(false);
+                  navigate("/"); // Go back to home
+                }}
+                className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-all"
+              >
+                Back to Home
+              </button>
              </div>
  
            </>
