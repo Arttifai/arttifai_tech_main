@@ -40,6 +40,12 @@ function App() {
       setShowInternships(false);
     }
   }, [location.pathname]); 
+ 
+ const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault();
+    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+  };
+ 
    return (
        <div className="min-h-screen">
          {!showInternships ? (
@@ -63,8 +69,20 @@ function App() {
                      animate={{ opacity: 1 }}
                      transition={{ duration: 0.5, delay: 0.2 }}
                    >
-                     <a href="#home" className="text-gray-700 hover:text-primary-500 transition-colors">Home</a>
-                     <a href="#about" className="text-gray-700 hover:text-primary-500 transition-colors">About</a>
+                     <a
+                       href="#home"
+                       onClick={(e) => handleSmoothScroll(e, "home")}
+                       className="text-gray-700 hover:text-primary-500 transition-colors"
+                     >
+                       Home
+                     </a>
+                     <a
+                       href="#about"
+                       onClick={(e) => handleSmoothScroll(e, "about")}
+                       className="text-gray-700 hover:text-primary-500 transition-colors"
+                     >
+                       About
+                     </a>
                      <a
                        href="#internships"
                        onClick={(e) => {
@@ -75,7 +93,13 @@ function App() {
                      >
                        Internships
                      </a>
-                     <a href="#contact" className="text-gray-700 hover:text-primary-500 transition-colors">Contact</a>
+                     <a
+                       href="#contact"
+                       onClick={(e) => handleSmoothScroll(e, "contact")}
+                       className="text-gray-700 hover:text-primary-500 transition-colors"
+                     >
+                       Contact
+                     </a>
                    </motion.div>
                  </div>
                </div>
