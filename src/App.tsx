@@ -1,6 +1,6 @@
 import React from 'react';
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain, IndianRupee } from 'lucide-react';
@@ -29,16 +29,23 @@ function App() {
     transition: { duration: 0.2 }
   };
   const [showInternships, setShowInternships] = useState(false);
-  const navigate = useNavigate();  // Initialize navigation
+  const location = useLocation();
+
+  // Sync state with URL changes
+  useEffect(() => {
+    if (location.pathname === "/internships") {
+      setShowInternships(true);
+    } else {
+      setShowInternships(false);
+    }
+  }, [location.pathname]);
 
   const handleExploreClick = () => {
     setShowInternships(true);
-    navigate("/internships");  // Updates the URL without full reload
   };
-  
+
   const handleBackClick = () => {
     setShowInternships(false);
-    navigate(-1);  // Moves back in history, just like the browser's back button
   };
 
   return (
