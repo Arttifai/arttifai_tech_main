@@ -69,7 +69,7 @@ function App() {
                        href="#internships"
                        onClick={(e) => {
                          e.preventDefault();
-                         document.getElementById("internships")?.scrollIntoView({ behavior: "smooth" });
+                         navigate("/internships"); // Navigate to /internships route
                        }}
                        className="text-gray-700 hover:text-primary-500 transition-colors"
                      >
