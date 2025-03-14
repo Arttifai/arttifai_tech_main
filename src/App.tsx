@@ -28,7 +28,6 @@ function App() {
   };
 
   return (
-    <Router>
       <div className="min-h-screen">
         {/* Navigation */}
         <nav className="glass-card fixed w-full z-10">
@@ -82,7 +81,7 @@ function App() {
                         </p>
                         <motion.div>
                           <Link
-                            to="/Internships"
+                            to="/internships"
                             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -429,7 +428,6 @@ function App() {
           </div>
         </footer>
       </div>
-    </Router>
   );
 }
 
