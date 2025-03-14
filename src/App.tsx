@@ -321,7 +321,7 @@ function App() {
         ) : (
           <>
             {/* Only Internships Page is Displayed */}
-            <InternshipPage />
+            <InternshipsPage />
   
             {/* Back to Home Button */}
             <button onClick={() => setShowInternships(false)}>Back to Home</button>
