@@ -92,7 +92,7 @@ function App() {
                               Join Arttifai Tech's internship program in collaboration with Google and Microsoft.
                               Gain real-world experience through our 100% remote internship opportunities.
                             </p>
-                            <motion.div>
+                            <div>
                               {location.pathname !== "/internships" ? (
                               <Link
                                 to="/internships"
@@ -101,7 +101,7 @@ function App() {
                                 Explore Internships
                                 <ChevronRight className="ml-2 h-5 w-5" />
                               </Link>
-                            </motion.div>
+                            </div>
                           </motion.div>
                           <motion.div 
                             className="hidden md:block"
