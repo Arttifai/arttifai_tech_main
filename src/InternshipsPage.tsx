@@ -6,20 +6,20 @@ import { IndianRupee } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const internships = [
-  { title: "Full Stack Development", duration: "1 week", type: "Remote", icon: Code, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Cloud Computing", duration: "1 week", type: "Remote", icon: Database, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Machine Learning", duration: "1 week", type: "Remote", icon: Brain, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "UI/UX Design", duration: "1 week", type: "Remote", icon: PenTool, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Data Science", duration: "1 week", type: "Remote", icon: LineChart, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Cybersecurity", duration: "1 week", type: "Remote", icon: Shield, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Blockchain Development", duration: "1 week", type: "Remote", icon: Code, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Artificial Intelligence", duration: "1 week", type: "Remote", icon: Brain, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Game Development", duration: "1 week", type: "Remote", icon: Code, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Embedded Systems", duration: "1 week", type: "Remote", icon: Database, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Internet of Things (IoT)", duration: "1 week", type: "Remote", icon: Shield, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "DevOps", duration: "1 week", type: "Remote", icon: Code, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Mobile App Development", duration: "1 week", type: "Remote", icon: Code, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Software Testing & QA", duration: "1 week", type: "Remote", icon: Shield, price: "₹6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" }
+  { title: "Full Stack Development", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Cloud Computing", duration: "1 week", type: "Remote", icon: Database, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Machine Learning", duration: "1 week", type: "Remote", icon: Brain, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "UI/UX Design", duration: "1 week", type: "Remote", icon: PenTool, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Data Science", duration: "1 week", type: "Remote", icon: LineChart, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Cybersecurity", duration: "1 week", type: "Remote", icon: Shield, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Blockchain Development", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Artificial Intelligence", duration: "1 week", type: "Remote", icon: Brain, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Game Development", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Embedded Systems", duration: "1 week", type: "Remote", icon: Database, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Internet of Things (IoT)", duration: "1 week", type: "Remote", icon: Shield, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "DevOps", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Mobile App Development", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Software Testing & QA", duration: "1 week", type: "Remote", icon: Shield, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" }
 ];
 
 
