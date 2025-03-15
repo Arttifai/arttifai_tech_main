@@ -112,15 +112,8 @@ function App() {
                      >
                        About
                      </a>
-                     <a
-                       href="#internships"
-                       onClick={(e) => {
-                         e.preventDefault();
-                         navigate("/internships"); // Navigate to /internships route
-                       }}
-                       className="text-gray-700 hover:text-primary-500 transition-colors"
-                     >
-                       Internships
+                     <a href="#internships" onClick={handleInternshipClick} className="text-gray-700 hover:text-primary-500 transition-colors">
+                            Internships
                      </a>
                      <a
                        href="#contact"
