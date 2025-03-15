@@ -520,7 +520,17 @@ function App() {
                    <ul className="space-y-2">
                      <li><a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">LinkedIn</a></li>
                      <li><a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">Twitter</a></li>
-                     <li><a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">Instagram</a></li>
+                     <li>
+                          <a
+                            href="https://www.instagram.com/arttifai_tech?igsh=MXZuOWZrbW4wYjh0Nw=="
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-primary-400 transition-colors"
+                          >
+                            Instagram
+                          </a>
+                     </li>
+
                    </ul>
                  </motion.div>
                </div>
