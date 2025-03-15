@@ -518,7 +518,16 @@ function App() {
                  >
                    <h4 className="text-lg font-semibold mb-4">Connect</h4>
                    <ul className="space-y-2">
-                     <li><a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">LinkedIn</a></li>
+                     <li>
+                          <a
+                            href="https://in.pinterest.com/arttifaiofficial/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-primary-400 transition-colors"
+                          >
+                            Pinterest
+                          </a>
+                     </li>
                      <li><a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">Twitter</a></li>
                      <li>
                           <a
