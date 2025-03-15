@@ -1,7 +1,7 @@
 // InternshipsPage.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Brain, PenTool, LineChart, Shield, Clock, MapPin, Braces, Joystick, FileText, ChevronLeftSquare, Library, Server,
+import { Code, Database, Brain, PenTool, LineChart, Shield, Clock, MapPin, Braces, Joystick, FileText, ChevronLeftSquare, Library, Server
         , Coffee} from 'lucide-react';
 import { IndianRupee } from "lucide-react";
 import { Link } from 'react-router-dom';
