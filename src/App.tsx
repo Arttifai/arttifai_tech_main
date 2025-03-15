@@ -58,19 +58,22 @@ function App() {
   };
 
   const handleInternshipClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
+      e.preventDefault();
 
-    if (location.pathname === "/internships") {
-      // If already on the page, just scroll smoothly
-      document.getElementById("internships")?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      // Navigate to internships
-      navigate("/internships");
-      setTimeout(() => {
-        document.getElementById("internships")?.scrollIntoView({ behavior: "smooth" });
-      }, 500);
-    }
+      if (location.pathname === "/internships") {
+            // If already on the internships page, just scroll to top
+            window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+            // Navigate to /internships first
+            navigate("/internships");
+
+            // Wait for navigation to complete, then scroll to top
+            setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            }, 100); // Small delay ensures navigation happens first
+      }
   };
+
  
    return (
        <div className="min-h-screen">
