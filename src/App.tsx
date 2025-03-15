@@ -44,17 +44,16 @@ function App() {
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
     e.preventDefault();
-    const target = document.getElementById(targetId);
 
-    if (target) {
-      // Apply fade-in effect before scrolling
-      target.style.opacity = "0"; // Hide initially
-      target.style.transition = "opacity 0.5s ease-in-out"; // Smooth fade transition
-
+    if (location.pathname !== "/") {
+      // Navigate to home first, then scroll
+      navigate("/");
       setTimeout(() => {
-        target.scrollIntoView({ behavior: "smooth" });
-        target.style.opacity = "1"; // Fade in after scrolling
-      }, 100);
+        document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+      }, 500); // Delay to ensure navigation completes
+    } else {
+      // Scroll smoothly if already on home page
+      document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -63,9 +62,9 @@ function App() {
 
     if (location.pathname === "/internships") {
       // If already on the page, just scroll smoothly
-      handleSmoothScroll(e, "internships");
+      document.getElementById("internships")?.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Navigate and fade in
+      // Navigate to internships
       navigate("/internships");
       setTimeout(() => {
         document.getElementById("internships")?.scrollIntoView({ behavior: "smooth" });
