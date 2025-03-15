@@ -1,23 +1,23 @@
 // InternshipsPage.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Brain, PenTool, LineChart, Shield, Clock, MapPin } from 'lucide-react';
+import { Code, Database, Brain, PenTool, LineChart, Shield, Clock, MapPin, Braces, Joystick, FileText, ChevronLeftSquare, Library, Server, CupSoda } from 'lucide-react';
 import { IndianRupee } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const internships = [
-  { title: "Full Stack Development", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Deep Learning", duration: "1 week", type: "Remote", icon: Database, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Machine Learning", duration: "1 week", type: "Remote", icon: Brain, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Full Stack Development", duration: "1 week", type: "Remote", icon: Braces, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Deep Learning", duration: "1 week", type: "Remote", icon: Brain, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Machine Learning", duration: "1 week", type: "Remote", icon: LineChart, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "UI/UX Design", duration: "1 week", type: "Remote", icon: PenTool, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Data Science", duration: "1 week", type: "Remote", icon: LineChart, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Game Development", duration: "1 week", type: "Remote", icon: Shield, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Advance Excel and Ms Word", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Python", duration: "1 week", type: "Remote", icon: Brain, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Data Science", duration: "1 week", type: "Remote", icon: Database, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Game Development", duration: "1 week", type: "Remote", icon: Joystick, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Advance Excel and Ms Word", duration: "1 week", type: "Remote", icon: FileText, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Python", duration: "1 week", type: "Remote", icon: ChevronLeftSquare , price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "C Language", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "C++ Language", duration: "1 week", type: "Remote", icon: Database, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "MYSQL", duration: "1 week", type: "Remote", icon: Shield, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "JAVA", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "C++ Language", duration: "1 week", type: "Remote", icon: Library, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "MYSQL", duration: "1 week", type: "Remote", icon: Server, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "JAVA", duration: "1 week", type: "Remote", icon: CupSoda, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
 ];
 
 
