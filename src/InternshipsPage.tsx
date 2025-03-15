@@ -1,8 +1,8 @@
 // InternshipsPage.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Brain, PenTool, LineChart, Shield, Clock, MapPin, Braces, Joystick, FileText, ChevronLeftSquare, Library, Server, CupSoda, Binary
-        , Coffee, Languages } from 'lucide-react';
+import { Code, Database, Brain, PenTool, LineChart, Shield, Clock, MapPin, Braces, Joystick, FileText, ChevronLeftSquare, Library, Server,
+        , Coffee} from 'lucide-react';
 import { IndianRupee } from "lucide-react";
 import { Link } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ const internships = [
   { title: "Data Science", duration: "1 week", type: "Remote", icon: Database, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "Game Development", duration: "1 week", type: "Remote", icon: Joystick, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "Advance Excel and Ms Word", duration: "1 week", type: "Remote", icon: FileText, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Python", duration: "1 week", type: "Remote", icon: Languages , price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Python", duration: "1 week", type: "Remote", icon: ChevronLeftSquare , price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "C Language", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "C++ Language", duration: "1 week", type: "Remote", icon: Library, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "MYSQL", duration: "1 week", type: "Remote", icon: Server, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
