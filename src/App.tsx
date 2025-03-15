@@ -41,10 +41,36 @@ function App() {
       setShowInternships(false);
     }
   }, [location.pathname]); 
- 
- const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
     e.preventDefault();
-    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      // Apply fade-in effect before scrolling
+      target.style.opacity = "0"; // Hide initially
+      target.style.transition = "opacity 0.5s ease-in-out"; // Smooth fade transition
+
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+        target.style.opacity = "1"; // Fade in after scrolling
+      }, 100);
+    }
+  };
+
+  const handleInternshipClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+
+    if (location.pathname === "/internships") {
+      // If already on the page, just scroll smoothly
+      handleSmoothScroll(e, "internships");
+    } else {
+      // Navigate and fade in
+      navigate("/internships");
+      setTimeout(() => {
+        document.getElementById("internships")?.scrollIntoView({ behavior: "smooth" });
+      }, 500);
+    }
   };
  
    return (
@@ -468,10 +494,26 @@ function App() {
                  >
                    <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
                    <ul className="space-y-2">
-                     <li><a href="#home" className="text-gray-400 hover:text-primary-400 transition-colors">Home</a></li>
-                     <li><a href="#about" className="text-gray-400 hover:text-primary-400 transition-colors">About</a></li>
-                     <li><a href="#internships" className="text-gray-400 hover:text-primary-400 transition-colors">Internships</a></li>
-                     <li><a href="#contact" className="text-gray-400 hover:text-primary-400 transition-colors">Contact</a></li>
+                     <li>
+                          <a href="#home" onClick={(e) => handleSmoothScroll(e, "home")} className="text-gray-400 hover:text-primary-400 transition-colors">
+                            Home
+                          </a>
+                     </li>
+                     <li>
+                          <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")} className="text-gray-400 hover:text-primary-400 transition-colors">
+                            About
+                          </a>
+                     </li>
+                     <li>
+                          <a href="#internships" onClick={handleInternshipClick} className="text-gray-400 hover:text-primary-400 transition-colors">
+                            Internships
+                          </a>
+                     </li>
+                     <li>
+                          <a href="#contact" onClick={(e) => handleSmoothScroll(e, "contact")} className="text-gray-400 hover:text-primary-400 transition-colors">
+                            Contact
+                          </a>
+                     </li>
                    </ul>
                  </motion.div>
                  <motion.div
