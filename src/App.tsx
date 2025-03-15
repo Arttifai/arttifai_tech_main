@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield, Brain, IndianRupee } from 'lucide-react';
+import { GraduationCap, Users, Mail, Phone, MapPin, ChevronRight, Briefcase, Clock, Award, Building, Globe, Code, Database, Cpu, PenTool, LineChart, Shield
+        , Brain, IndianRupee, Braces, Joystick} from 'lucide-react';
 import logo from '/logo.png';
 import InternshipsPage from './InternshipsPage';
  
@@ -279,7 +280,7 @@ function App() {
                        title: "Full Stack Development",
                        duration: "1 week",
                        type: "Remote",
-                       icon: Code,
+                       icon: Braces,
                        price: "6.99",
                        formLink: "https://forms.gle/N7oTjujhxetADGn38"
                      },
@@ -287,7 +288,7 @@ function App() {
                        title: "Deep Learning",
                        duration: "1 week",
                        type: "Remote",
-                       icon: Database,
+                       icon: Brain,
                        price: "6.99",
                        formLink: "https://forms.gle/N7oTjujhxetADGn38"
                      },
@@ -295,7 +296,7 @@ function App() {
                        title: "Machine Learning",
                        duration: "1 week",
                        type: "Remote",
-                       icon: Brain,
+                       icon: LineChart,
                        price: "6.99",
                        formLink: "https://forms.gle/N7oTjujhxetADGn38"
                      },
@@ -311,7 +312,7 @@ function App() {
                        title: "Data Science",
                        duration: "1 week",
                        type: "Remote",
-                       icon: LineChart,
+                       icon: Database,
                        price: "6.99",
                        formLink: "https://forms.gle/N7oTjujhxetADGn38"
                      },
@@ -319,7 +320,7 @@ function App() {
                        title: "Game Development",
                        duration: "1 week",
                        type: "Remote",
-                       icon: Shield,
+                       icon: Joystick,
                        price: "6.99",
                        formLink: "https://forms.gle/N7oTjujhxetADGn38"
                      }
