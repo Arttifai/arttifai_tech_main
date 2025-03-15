@@ -528,7 +528,17 @@ function App() {
                             Pinterest
                           </a>
                      </li>
-                     <li><a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">Twitter</a></li>
+                     <li>
+                          <a
+                            href="https://x.com/arttifai_tech"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-primary-400 transition-colors"
+                          >
+                            Twitter
+                          </a>
+                     </li>
+
                      <li>
                           <a
                             href="https://www.instagram.com/arttifai_tech?igsh=MXZuOWZrbW4wYjh0Nw=="
