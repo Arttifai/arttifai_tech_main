@@ -424,10 +424,6 @@ function App() {
                  <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
                  <div className="space-y-4">
                    <div className="flex items-center">
-                     <Phone className="h-6 w-6 text-primary-500 mr-3" />
-                     <span>+91 6385874623</span>
-                   </div>
-                   <div className="flex items-center">
                      <Mail className="h-6 w-6 text-primary-500 mr-3" />
                      <span>support@arttifai.tech</span>
                    </div>
