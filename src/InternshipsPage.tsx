@@ -13,7 +13,7 @@ const internships = [
   { title: "UI/UX Design", duration: "1 week", type: "Remote", icon: PenTool, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "Data Science", duration: "1 week", type: "Remote", icon: Database, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "Game Development", duration: "1 week", type: "Remote", icon: Joystick, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
-  { title: "Advance Excel and Ms Word", duration: "1 week", type: "Remote", icon: FileText, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
+  { title: "Advance Excel", duration: "1 week", type: "Remote", icon: FileText, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "Python", duration: "1 week", type: "Remote", icon: ChevronLeftSquare , price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "C Language", duration: "1 week", type: "Remote", icon: Code, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
   { title: "C++ Language", duration: "1 week", type: "Remote", icon: Library, price: "6.99", formLink: "https://forms.gle/N7oTjujhxetADGn38" },
