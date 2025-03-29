@@ -427,6 +427,10 @@ function App() {
                      <Mail className="h-6 w-6 text-primary-500 mr-3" />
                      <span>support@arttifai.tech</span>
                    </div>
+                   <div className="flex items-center">
+                     <Phone className="h-6 w-6 text-primary-500 mr-3" />
+                     <span>+91 6385721504</span>
+                   </div>
                  </div>
                </motion.div>
                <motion.div
