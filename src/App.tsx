@@ -163,6 +163,19 @@ function App() {
                                 <ChevronRight className="ml-2 h-5 w-5" />
                               </button>
                              </motion.div>
+                                   <motion.div className="mt-4">
+                                          <a
+                                            href="https://docs.google.com/forms/d/e/1FAIpQLSegvnL81_HqBTfUB7zE7Pe6LF2vyUGhgO8OfAQZ0o0U5GlMSg/viewform?usp=header"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                          >
+                                            Webniar Application Form
+                                            <ChevronRight className="ml-2 h-5 w-5" />
+                                          </a>
+                                </motion.div>
                            </motion.div>
                            <motion.div 
                              className="hidden md:block"
